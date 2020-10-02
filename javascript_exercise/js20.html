@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function	odaklan(x){
+			document.getElementById(x).style.backgroundColor="yellow";
+			document.getElementById(x).style.color="red";
+
+		}
+		function terket(x){
+			document.getElementById(x).style.backgroundColor="white";
+			document.getElementById(x).style.color="white";
+		}
+	</script>
+</head>
+<body>
+	<form method="get">
+		<textarea id="bolge" cols="60" rows="10" onfocus="odaklan(this.id)" onblur="terket(this.id)"></textarea> <br>
+		<input id="alan" type="text" name=""onfocus="odaklan(this.id)" onblur="terket(this.id)">
+	</form>
+
+</body>
+</html>

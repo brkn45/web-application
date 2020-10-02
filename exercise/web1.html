@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<meta charset="utf-8" name="viewport" content="width=device-width">
+<style type="text/css">
+	*{
+		box-sizing:border-box;
+	}
+	.box{
+		width: 25%;
+		height: 250px;
+		background: yellow;
+		float: left;
+		border:1px solid blue;
+
+	}
+	@media screen and (max-width: 700px) {
+		.box{
+			width: 50%;
+		}
+	}
+	@media screen and (max-width: 400px){
+		.box{
+			width: 100%;
+		}
+	}
+</style>
+<body >
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>

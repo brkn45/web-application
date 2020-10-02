@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var pencere;
+		function pencereac(){
+			pencere =window.open("","pencere","width=400,height=300,top=200,left=200,scrollbars=yes");
+			pencere.document.write("<html><head><title>Yeni Pencere</title></head><body bgColor='#ffffc1' text='#ca4360'><center> <h3>Merhaba</h3></center></body> </html> ");
+			setTimeout("pencerekapat()","3000");
+
+		}
+		function pencerekapat(){
+			pencere.close();
+		}
+	</script>
+</head>
+<body>
+	<a href="#" onclick="pencereac()">Pencereyi ac</a>
+
+</body>
+</html>

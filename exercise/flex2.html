@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		background-color: yellow;
+		padding: 15px;
+		display: flex;  
+		flex-direction: column;
+		justify-content: center /* ortada sıralamay baslar*/
+		//justify-content:flex-start; /* soldan sıralmaya baslar*/
+		//justify-content: flex-end; /*sağdan sıralamay baslar */ 
+		//justify-content: space-around; /* aralarında asit bosluklar bırakarak sıralar.*/
+		//justify-content: space-between; /* aralarına esit bosluk koyarak sıralar*/
+		//align-items: stretch; /* içerisindekinin özelliğine uyarlar varsayılan olarak gelir*/
+		//align-items: center; /* elemanlar birbirinin özelliklerine bağımlı kalmazlar*/
+		//align-items: flex-start; /*elamanlar üste doğru sıralandı*/
+		//align-items: flex-end; /* aşşağı doğru hizalanıyor*/
+		//align-items: baseline; /* içeriklerin alt tabanından yapılıyor*/
+	}	
+	.item{
+		padding: 30px;
+		background-color: red;
+		margin: 30px;
+		color: #fff;
+		font-size: 35px;
+		flex-grow: 1; /* elmanlar conteinırı eşit olarak doldurular*/
+	}
+	.i1{
+		align-self: stretch;
+		order: 6;
+		flex-grow: 2;
+		flex-basis: 15%; /* containerın içinden %15lik yer kaplar pixsel cinsinden vrirsek is pixsel miktarı yer kaplar*/
+		flex-shrink: 1;/*daraldığında küçüldeüğnde kullanılılr*/
+
+	}
+	.i2{
+		height: 300px;
+		order: 5;
+		flex-grow: 4; /* 4x katı kadr değer alacaka*/
+	}
+	.i3{
+		height: 200px;
+		align-self: flex-start; /*kendini konunmlandırdı*/
+	}
+	.i4{
+		align-self: flex-end; /* i4 sadece kendini konumlandırdı*/
+		order: -1; /* sıralaya en düşük değeri verdiğimizde başa gelecek*/
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+			<div class="item">item 1</div>
+			<div class="item i2">item 2</div>
+			<div class="item i3">item 3</div>	
+			<div class="item i4">item 4</div>
+					
+	</div>
+	
+</body>
+</html>

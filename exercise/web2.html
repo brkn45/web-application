@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive İmage</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;		}
+		body{
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.6rem;
+			text-align: center;;
+			line-height: 1.5rem;
+			background: #333;
+			color: #fff;
+		}
+		html{
+			font-size: 8px;
+		}
+		a{
+			text-decoration: none;
+		}p{
+		padding: 1.6rem 0;		
+		}
+		header{
+			height: 45rem;
+			background: red;
+		}
+		header .bg-image{
+			position: absolute;	
+			background-image: url();
+			height: 45rem;
+			width: 100%;
+			opacity: 0.4;
+			background-position: center;
+			background-size: cover;
+			z-index: -1;
+		}	
+		header h1{
+			padding: 11rem,
+			padding-bottom:0;
+		}
+		.btn{
+			background: #333;
+			color: #fff;
+			border:1px solid #666;
+			margin: .5rem;
+			display: inline-block;
+		}
+		.btn:hover{
+			background-color: #eaeaea;
+			color: #333;
+		}
+
+		/*section-a*/
+		#section-a{
+			background-color: #eaeaea;
+			color: #333;
+			padding: 3.2rem;
+		}
+		img{
+			width: 100%;
+			height: auto;
+		}
+		#section-b{
+			padding: 2rem;
+		}
+		#section-b ul{
+			list-style: none;
+		}
+		#section-b li{
+			background: #fff;
+			color: #333;
+			margin-bottom: 1.2rem;
+		}
+		.col-content{
+			padding: 1.5rem;
+		}
+		/*section-c*/
+		#section-c{
+			background-color: #eaeaea;
+			color: #333;
+			padding: 5rem;
+		}
+		/*section-d*/
+		#section-d .box:first-child{
+			background-color: #2690d4;
+		}
+		/*footer*/
+
+		footer{
+			padding: 4rem;
+			background:#000;
+		}
+		footer a{
+			color:blue;
+		}
+		@media screen and (min-width: 700px) {
+			html{
+				font-size: 8px;
+			}
+		}
+		@media screen and (min-width: 1200px) {
+			#section-b{
+				width: 28%;
+				margin: 1%;
+				display: inline-block;
+			}
+			.box{
+				width: 50%;
+				float: left;
+
+			}
+			html{
+				font-size: 12px;
+			}
+		}
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="bg-image"></div>
+		<div class="content">
+			<h1>
+				Welcome to Berkanakin.com
+			</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolor laboriosam voluptas voluptates cumque eos vero placeat magnam consectetur possimus? Quibusdam doloremque cumque dolorum quo ut nisi a iure officia.</p>
+		<a href="" class="btn">Read More</a>
+		</div>
+	</header>
+	<main>
+		<section id="section-a">
+			<div class="content">
+			<h2>
+				Web & Aplication Development
+			</h2> 
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur voluptatem veritatis, sapiente maiores deleniti placeat cupiditate assumenda eos itaque earum nostrum ab eaque nobis ipsum, distinctio, voluptates quos consectetur iusto.</p></div>
+
+		</section>
+		<section id="section-b">
+			<ul>
+				<li>
+					<div class="col">
+						<img src="">
+						<div class="col-content"></div>
+						<h3 class="col-title">
+							Web Application
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, libero distinctio molestias dolore consequatur sunt repellat nostrum, soluta pariatur recusandae omnis hic veritatis, saepe ducimus incidunt sapiente ipsum, mollitia asperiores.</p>
+					</div>
+				</li>
+				<li>
+					<div class="col">
+						<img src="">
+						<div class="col-content"></div>
+						<h3 class="col-title">
+							Web Application
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, libero distinctio molestias dolore consequatur sunt repellat nostrum, soluta pariatur recusandae omnis hic veritatis, saepe ducimus incidunt sapiente ipsum, mollitia asperiores.</p>
+					</div>
+				</li>
+				<li>
+					<div class="col">
+						<img src="">
+						<div class="col-content"></div>
+						<h3 class="col-title">
+							Web Application
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, libero distinctio molestias dolore consequatur sunt repellat nostrum, soluta pariatur recusandae omnis hic veritatis, saepe ducimus incidunt sapiente ipsum, mollitia asperiores.</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section id="section-c">
+			<div class="content">
+				<h2>Develop your dreams</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, provident atque accusantium similique et nesciunt debitis, eius dicta veritatis itaque dolorum incidunt ad modi temporibus magni, recusandae sunt quasi ut!
+				</p>
+			</div>
+		</section>
+
+		<section id="section-d" class="clearfix">
+			<div class="box">
+				<h2>Contact Us</h2>
+			
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quidem odio, impedit doloremque a quisquam corporis facilis officiis omnis sunt esse sit, earum quaerat animi repellat nihil eius minus! Quas.
+			</p>
+			<p>berkanakin/contact</p>
+			</div>
+			<div class="box">
+				<h2>About Us</h2>
+			
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quidem odio, impedit doloremque a quisquam corporis facilis officiis omnis sunt esse sit, earum quaerat animi repellat nihil eius minus! Quas.
+			</p>
+			<p>berkanakin/contact</p>
+			</div>
+		</section>
+
+	</main>
+	<footer>
+		<div>Develop your dreams</div>
+		<div>Online courses by<a href="#">Berkan AKIN</a></div>
+		
+	</footer>
+	
+
+</body>
+</html>

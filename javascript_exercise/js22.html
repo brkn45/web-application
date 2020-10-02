@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function kontroll(){
+			var adal=document.getElementById("ad").value;
+			var sifreal=document.getElementById("sifre").value;
+			var emailal=document.getElementById("email").value;
+			var tcnoal=document.getElementById("tcno").value;
+			
+
+			if(adal==""){
+				document.getElementById("aduyari").innerHTML="adı girmediniz";
+				document.getElementById("aduyari").style.color="red";
+			}
+			if(emailal==""){
+				document.getElementById("emailuyari").innerHTML="adı girmediniz";
+				document.getElementById("emailuyari").style.color="red";
+			}
+			if(sifreal==""){
+				document.getElementById("sifreuyari").innerHTML="adı girmediniz";
+				document.getElementById("sifreuyari").style.color="red";
+			}
+			if(tcnoal==""){
+				document.getElementById("tcnouyari").innerHTML="adı girmediniz";
+				document.getElementById("tcnouyari").style.color="red";
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td width="150">Adı Soyadi</td>
+			<td width="150"><input type="text" name="" id="ad"></td>
+			<td width="350"><span id="aduyari"></span></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="" id="email"></td>
+			<td><span id="emailuyari"></span></td>
+		</tr>
+		tr>
+			<td>Şifre</td>
+			<td><input type="password" name="" id="sifre"></td>
+			<td><span id="sifreuyari"></span></td>
+		</tr>
+		<tr>
+			<td>Tc Kimlik No</td>
+			<td><input type="text" name="" id="tcno"></td>
+			<td><span id="tcnouyari"></span></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" name="" value="gonder" onclick="kontrol()"></td>
+			<td><span id=""></span></td>
+		</tr>
+	</table>
+
+</body>
+</html>

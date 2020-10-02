@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Otobus</title>
+	<style type="text/css">
+		.bus{
+			width: 400px;
+			height: 600px;
+			margin: 45px auto;
+		}
+		.anten{
+			width: 100px;
+			height:2px;
+			background: #000;
+			margin: 100px auto 0 auto;
+			transform: rotate(290deg);
+		}
+		.left_mirror{
+			width: 39px;
+			height: 25px;
+			border-top: 1px solid #000;
+			border-left: 1px solid #000;
+			border-bottom: 1px solid #000;
+			border-radius: 5px 0 0 5px;
+			background: #c9f;
+			margin: 240px 0 0 0;
+			float: left;
+		}
+		.window{
+			width: 310px;
+			height: 230px;
+			border:1px solid #000;
+			border-radius: 15px 15px 0 0;
+			float: left;
+			margin: 45px 0 0 0;
+
+
+		}
+		.right_mirror{
+			width: 39px;
+			height: 25px;
+			border-top: 1px solid #000;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+			border-radius: 0  5px  5px 0;
+			background: #c9f;
+			margin: 240px 0 0 0;
+			float: left;
+		}
+		.kaporta{
+			width: 310px;
+			height: 120px;
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+			border-bottom: 1px solid #000;
+			border-radius: 0 0 10px 10px;
+			float: left;
+			margin: 0 0 0 40px;
+			background: #c9f;
+		}
+		.left_w{
+			width: 50px;
+			height: 40px;
+			background: #000;
+			border-radius: 0 0 5px 5px;
+			margin: 0 0 0 80px;
+			float: left;
+		}
+		.right_w{
+			width: 50px;
+			height: 40px;
+			background: #000;
+			border-radius: 0 0 5px 5px;
+			margin: 0 0 0 140px;
+			float: left;
+
+		}
+		.dv_mirror{
+			width: 70px;
+			height: 20px;
+			background: gray;
+			border-radius: 5px;
+			margin: 30px auto 0 auto;
+			
+		}
+		.left_chair{
+			width: 120px;
+			height: 120px;
+			background: #90f;
+			border-radius: 10px 10px 0 0;
+			margin: 60px 0 0 20px;
+			float: left;
+
+
+		}
+		.right_chair{
+			width: 120px;
+			height: 120px;
+			background: #90f;
+			border-radius: 10px 10px 0 0;
+			margin: 60px 0 0 37px;
+			float: left;
+
+
+		}
+		.left_erase{
+			width: 110px;
+			height: 3px;
+			background: #000;
+			margin: 118px 0 0 20px;
+
+		}
+		.wheel{
+			width: 60px;
+			height: 30px;
+			border-left: 8px solid #000;
+			border-right: 8px solid #000;
+			border-top: 8px solid #000;
+			border-radius: 40px 40px 0 0;
+			margin: 90px 0 0 20px;
+
+		}
+		.right_erase{
+			width: 110px;
+			height: 3px;
+			background: #000;
+			margin: -10px 0 0 -10px;
+
+		}
+		.far_sol{
+			width: 50px;
+			height: 50px;
+			border-radius: 25px 25px 25px 25px;
+			background: #ff9;
+			margin: 30px 0 0 20px;
+			box-shadow: 5px 5px 15px #f7d3ac, -5px -5px 15px #f7d3ac;
+			float: left; 
+
+		}
+		.orta_kaporta{
+			width: 150px;
+			height: 100px;
+			float: left;
+			margin: 10px 0 0 12px;
+		}
+		.far_sag{
+			width: 50px;
+			height: 50px;
+			border-radius: 25px 25px 25px 25px;
+			background: #ff9;
+			margin: 30px 0 0 12px;
+			box-shadow: 5px 5px 15px #f7d3ac, -5px -5px 15px #f7d3ac;
+			float: left; 
+
+		}
+		.izgara_bir{
+			width: 70px;
+			height: 3px;
+			background: #444;
+			margin: 25px  auto 0 auto;
+
+		}
+		.izgara_iki{
+			width: 80px;
+			height: 3px;
+			background: #444;
+			margin: 5px  auto 0 auto;
+
+		}
+		.izgara_uc{
+			width: 90px;
+			height: 3px;
+			background: #444;
+			margin: 5px  auto 0 auto;
+
+		}
+		.izgara_dort{
+			width: 100px;
+			height: 3px;
+			background: #444;
+			margin: 5px  auto 0 auto;
+
+		}
+		.plaka{
+			width: 120px;
+			height: 20px;
+			background: #FFF;
+			border: 1px solid #000;
+			margin: 25px auto 0 auto;
+		}
+		.plaka_sol{
+			width: 15px;
+			height: 15px;
+			background: #06f;
+			float: left;
+			font: 10px tahoma; 
+			color: #FFF;
+			text-align: center;
+			padding: 5px 0 0 0;
+
+		}
+		.plaka_sag{
+			width: 105px;
+			height: 15px;
+			float: left;
+			text-align: center;
+			font: bold 14px tahoma;
+			color: #000;
+			padding: 5px 0 0 0;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="bus">
+		<div class="anten"></div>
+		<div class="left_mirror"></div>
+		<div class="window">
+			<div class="dv_mirror"></div>
+			<div class="left_chair">
+				<div class="left_erase"></div>
+			</div>
+			<div class="right_chair">
+				<div class="wheel"></div>
+				<div class="right_erase"></div>
+			</div>
+		</div>
+		<div class="right_mirror"></div>
+		<div class="kaporta">
+			<div class="far_sol"></div>
+			<div class="orta_kaporta">
+				<div class="izgara_bir"></div>
+				<div class="izgara_iki"></div>
+				<div class="izgara_uc"></div>
+				<div class="izgara_dort"></div>
+				<div class="plaka">
+					<div class="plaka_sol">TR</div>
+					<div class="plaka_sag">45 B 3690</div>
+				</div>
+			</div>
+			<div class="far_sag"></div>
+		</div>
+		<div class="left_w"></div>
+		<div class="right_w"></div>
+	</div>
+
+</body>
+</html>

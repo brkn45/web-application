@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<style type="text/css">
+	.conteiner{
+		width: 980px;
+		height: 650px;
+		margin: 10px auto;
+		border:1px dashed #bd63cd;
+		padding: 20px 0 20px 40px;
+	}
+	body{
+		background: #f6f6f6;
+	}
+	section{
+		width: 450px;
+		height: 220px;
+		float: left;
+		margin: 0 40px 60px 0;
+	}
+	aside{
+		width: 450px;
+		height: 120px;
+		float: left;
+		margin: 0 40px 60px 0;
+	}
+	footer{
+		width: 980px;
+		height: 100px;
+		float: left;
+
+	}
+	section input, aside input{
+		width: 300px;
+		padding: 5px;
+		border: 1px dashed #a0a0a0;
+		color: #104579;
+		font-size: 14px;
+	}
+	section input:hover{
+		background: #b0bdbc;
+		border:1px dashed #bd562b;
+	}
+	.kutubaslik{
+		width: 450px;
+		padding: 0 0 10px 0;
+		margin: 0 0 15px 0;
+		border-bottom: 2px solid #ddd52d;
+		color: #104579;
+		font: bold 10px tahoma;
+	}
+	input.radio ,input.onay{
+		width: 15px;
+	}
+	textarea{
+		width: 930px;
+		height: 65px;
+		padding: 5px;
+		border: 1px solid #ddd;
+		color: #4d4d4d;
+		font-size: 14px;
+
+	}
+	button, input.gonder{
+		width: 100px;
+		padding: 10px 25px;
+		margin: 0 30px 20px 0; 
+		color: red;
+		background: #14588f;
+		cursor: pointer;font-size: 14px; 
+		border:none;
+	}
+	tr:hover{
+		color: #dd652b;
+	}
+	tr:hover .siyah{
+		color: #000;
+
+	}
+	input:focus, textarea{
+		outline: none;
+	}
+	#askerlik{
+		width: 300px;
+		padding: 5px;
+		border: 1px dashed #a0a0a0;
+		color: #104579;
+		font-size: 14px;
+
+	}
+</style>
+<script type="text/javascript">
+	function	askerlikdurumu(deger){
+		if (document.getElementById(deger).value=="erkek") {
+			document.getElementById("askerlik").type="text";
+		}
+		else{
+			document.getElementById("askerlik").type="hidden";
+		}
+
+	}
+	function	ackapat(deger){
+		if (document.getElementById(deger).type=="hidden") {
+			document.getElementById(deger).type="text";
+		}
+		else{
+			document.getElementById(deger).type="hidden";
+		}
+
+	}
+	function kapat(){
+		document.getElementById("askerlik").value="";
+		document.getElementById("digerdil").value="";
+		document.getElementById("digerilgi").value="";
+		document.getElementById("digerpro").value="";
+	}
+</script>
+<body>
+	<form>
+	<div class="conteiner">
+		<section>
+			<div class="kutubaslik" >Kişisel bilgiler</div>
+			<table width="450" height="220">
+				<tr>
+					<td width="145">Ad</td>
+					<td width="5"></td>
+					<td width="300"><input placeholder="Adınını giriniz" type="text" maxlength="8" name="" required="required" ></td>
+				</tr>
+				<tr>
+					<td>Soyad</td>
+					<td>:</td>
+					<td><input placeholder="soyadınızı giriniz" type="text" name="" required="required"></td>
+				</tr><tr>
+					<td>doğum tarihi</td>
+					<td>:</td>
+					<td><input type="date" name="" required="required"></td>
+				</tr><tr>
+					<td>telefon</td>
+					<td>:</td>
+					<td><input placeholder="telefonunuzu giriniz" type="text" name="" pattern="" required="required"></td>
+				</tr><tr>
+					<td>mail adresi</td>
+					<td>:</td>
+					<td><input placeholder="mail adresinizi giriniz" type="mail" name="" required="required"></td>
+				</tr><tr>
+					<td>cinsiyet</td>
+					<td>:</td>
+					<td class="siyah"><input id="erkek" onclick="askerlikdurumu(this.id)" class="radio" value="erkek" type="radio" name="cinsiyet">Erkek
+						<input id="kadin" class="radio" value="kadin" onclick="askerlikdurumu(this.id)" type="radio" name="cinsiyet" >Kadın</td>
+						<input id="askerlik" name="asker" type="hidden" placeholder="askerlik durumunu giriniz" name="">
+				</tr>
+			</table>
+		</section>
+		<section><div class="kutubaslik" >Eğitim durumu</div>
+			<table width="450" height="220">
+				<tr>
+					<td width="145">İlkokul</td>
+					<td width="5"></td>
+					<td width="300"><input placeholder="okuduğunuz ilkokulu giriniz" type="text" name="" required="required"></td>
+				</tr>
+				<tr>
+					<td>Ortaokul</td>
+					<td>:</td>
+					<td><input placeholder="okudğunuz orta okulu giriniz" type="text" name="" required="required"></td>
+				</tr><tr>
+					<td>LİSE</td>
+					<td>:</td>
+					<td><input placeholder="okuduğunuz liseyi giriniz" type="text" name="" required="required"></td>
+				</tr><tr>
+					<td>Üniversite</td>
+					<td>:</td>
+					<td><input placeholder="okuduğunuz üniversiteyi giriniz" type="text" name="" required="required"></td>
+				</tr><tr>
+					<td>Yüksek lisans</td>
+					<td>:</td>
+					<td><input type="text" name="" required="required"></td>
+				</tr><tr>
+					<td>Yabancı Diller</td>
+					<td>:</td>
+					<td class="siyah"><input class="onay" type="checkbox" name="">İngilizce
+						<input class="onay" type="checkbox" name="">Almanca
+						<input class="onay" type="checkbox" name="">Fransızca
+						<input class="onay" type="checkbox" name="" onclick="ackapat('digerdil')">Diğer
+
+						<input id="digerdil" placeholder="diğer dili giriniz" type="hidden" name="digerdil">
+						</td>
+				</tr>
+			</table>
+		</section>
+		<aside><div class="kutubaslik" >İlgi alanları</div>
+			<input class="onay" type="checkbox" name="">Sinema<br/>
+			<input class="onay" type="checkbox" name="">Tiyatro<br/>
+			<input class="onay" type="checkbox" name="">Spor<br/>
+			<input class="onay" type="checkbox" name="">Kitap<br/>
+			<input class="onay" type="checkbox" name="">Kitap<br/>
+			<input class="onay" type="checkbox" onclick="ackapat('digerilgi')" name="">Diğer
+			<input type="hidden" id="digerilgi"  placeholder="başka bildiğiniz dili giriniz" name="digerilgi" >
+			
+		</aside>
+		<aside><div class="kutubaslik" >Beceriler</div>
+			<input class="onay" type="checkbox" name="">CSS<br/>
+			<input class="onay" type="checkbox" name="">ASP.NET<br/>
+			<input class="onay" type="checkbox" name="">Php<br/>
+			<input class="onay" type="checkbox" onclick="ackapat('digerpro')" name="">Diğer
+			<input type="hidden" id="digerpro"  placeholder="başka bildiğiniz dili giriniz" name="digerpro" >			
+		</aside>
+		<footer>
+			<div class="kutubaslik">Düşünceleriniz</div>
+			<textarea></textarea><br/><br/>
+			<button>Gönder</button>
+			<input class="gonder" type="reset" name="" onclick="kapat()">
+		</footer>
+	</div>
+</form>
+</body>
+</html>

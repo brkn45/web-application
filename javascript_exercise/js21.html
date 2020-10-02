@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		input{
+			width: 150px;
+			height: 25px;
+			border: 1px solid #08c;
+		}
+	</style>
+	<script type="text/javascript">
+		function kontrol(){
+			var sifreal=document.getElementById("sifre").value;
+			if(sifreal=="123456"){
+				document.getElementById("sifre").style.backgroundColor="#f0c0a0";
+				document.getElementById("uyari").innerHTML="";
+			}
+			else{
+				document.getElementById("uyari").innerHTML="Şifre hatalı !!!";
+				document.getElementById("uyari").style.color="red";
+				document.getElementById("sifre").style.backgroundColor="yellow"
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<form method="get">
+		<table>
+			<tr>
+				<td width="150" height="30">Kullanıcı adi</td>
+				<td width="150"><input id="kullanici" type="text" name=""></td>
+				<td width="350"></td>
+			</tr>
+			<tr>
+				<td height="30">Şifre</td>
+				<td><input id="sifre" onchange="kontrol()" type="password" name=""></td>
+				<td><span id="uyari"></span></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
